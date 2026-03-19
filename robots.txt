@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bang1681681-dev.github.io/jfcj-news/sitemap.xml
