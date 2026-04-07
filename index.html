@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width: 100%, initial-scale=1.0">
     <title>巨富财经 - 每日精选全球重要财经资讯</title>
     <meta name="description" content="📈 每日精选全球重要财经资讯 | 🔍 深度解读市场趋势与投资机会 | 💰 分享实用理财技巧与搞钱思路">
     <meta name="keywords" content="巨富财经, 财经资讯, 投资理财, 金融, 股票, 基金, 理财技巧">
@@ -37,10 +37,6 @@
             background: var(--bg-dark);
             color: var(--text-primary);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
             background-image: 
                 radial-gradient(ellipse at top, #1a2a3a 0%, transparent 50%),
@@ -48,15 +44,16 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
-            text-align: center;
+            margin: 0 auto;
         }
 
         .logo {
-            font-size: 80px;
-            margin-bottom: 20px;
+            font-size: 60px;
+            margin-bottom: 16px;
             animation: float 3s ease-in-out infinite;
+            text-align: center;
         }
 
         @keyframes float {
@@ -65,9 +62,10 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 16px;
+            text-align: center;
             background: linear-gradient(135deg, #ffd700, #ff8c00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -76,18 +74,19 @@
 
         .description {
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.8;
-            margin-bottom: 40px;
-            padding: 20px;
+            margin-bottom: 24px;
+            padding: 16px;
             background: var(--bg-card);
-            border-radius: 16px;
+            border-radius: 12px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
         }
 
         .description span {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .description span:last-child {
@@ -98,34 +97,85 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             background: linear-gradient(135deg, #0088cc, #00aaff);
             color: white;
             text-decoration: none;
-            padding: 18px 40px;
+            padding: 14px 32px;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+            margin-bottom: 30px;
         }
 
         .telegram-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(0, 136, 204, 0.6);
-            background: linear-gradient(135deg, #0099dd, #00bbff);
         }
 
         .telegram-btn svg {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .news-time {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .news-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .news-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
         }
 
         .stats {
-            margin-top: 50px;
+            margin-top: 40px;
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
@@ -134,48 +184,36 @@
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent);
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             margin-top: 4px;
         }
 
         footer {
-            margin-top: 60px;
+            margin-top: 50px;
+            text-align: center;
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
+            padding-bottom: 20px;
         }
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
 
             .logo {
-                font-size: 60px;
+                font-size: 50px;
             }
 
-            .description {
-                font-size: 1rem;
-                padding: 16px;
-            }
-
-            .telegram-btn {
-                padding: 16px 32px;
-                font-size: 1.1rem;
-            }
-
-            .stats {
-                gap: 30px;
-            }
-
-            .stat-number {
-                font-size: 1.5rem;
+            .news-card {
+                padding: 14px;
             }
         }
     </style>
@@ -192,12 +230,460 @@
             <span>💰 分享实用理财技巧与搞钱思路</span>
         </div>
         
-        <a href="https://t.me/jmcj_news" target="_blank" rel="noopener noreferrer" class="telegram-btn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-            </svg>
-            加入 Telegram 频道
-        </a>
+        <div style="text-align: center;">
+            <a href="https://t.me/jmcj_news" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                加入 Telegram 频道
+            </a>
+        </div>
+        
+        <!-- 动态新闻区域 -->
+        <h2 class="section-title">📰 最新资讯</h2>
+        <div class="news-list" id="newsList">
+
+        <div class="news-card">
+            <div class="news-time">未知</div>
+            <div class="news-content">📈 财经简报 · 2026年4月7日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 美伊达成停火协议"希望渐灭"，特朗普最后期限将至
+   └ 《华尔街日报》6日报道，调解方对伊朗在特朗普设定的7日20时最后期限前"屈服"感到悲观，美伊立场差距过大难以缩小。特朗普预计将下达打击伊朗最终命令
+   📎 https://www.10jqka.com.cn/
+
+🔹 三星电子盈利指引超预期：单季赚超2600亿元
+   └ 三星电子Q1盈利指引超预期，市场机构预测DRAM合约价Q2还将上涨58%-63%。凤凰网同时报道三星内存再提价30%
+   📎 https://www.yicai.com/news/103120598.html
+
+🔹 A股四大指数集体高开，折叠屏、存储器等板块涨幅居前
+   └ 盘面上，苹果、工业气体、存储器、半导体材料、HBM、锂矿概念股涨幅居前
+   📎 https://www.yicai.com/news/103120396.html
+
+🔹 美联储官员放鹰：哈马克称若通胀持续高企或需加息
+   └ 联储官员哈马克表示，如果通胀持续高企，可能需要进一步加息。美国3月ISM服务业支付价格指数创逾3年新高
+   📎 https://finance.ifeng.com/c/8s7f90qpmzN
+
+🔹 多国央行会否持续抛售黄金，关键变量在于中东局势
+   └ 中东局势紧张可能引发黄金储备占比高的经济体抛售黄金。分析师称原油依赖度高、外储紧张的国家为潜在抛售高危区
+   📎 https://www.yicai.com/news/103120055.html
+
+🔹 光大银行注册资本增至590.9亿元，增幅27%
+   └ 爱企查显示光大银行注册资本由约466.8亿元增至约590.9亿元
+   📎 https://www.36kr.com/newsflashes
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新
+</div>
+        </div>
+        
+        <div class="news-card">
+            <div class="news-time">未知</div>
+            <div class="news-content">📈 财经简报 · 2026年4月7日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 伊朗卫生部：美袭击德黑兰致7名儿童丧生
+   └ 当地时间6日，7名儿童在美军清晨针对德黑兰发动的空袭中丧生。伊朗情报部门同日宣布逮捕17名涉嫌向敌对方发送敏感坐标的美以间谍
+   📎 https://www.10jqka.com.cn/
+
+🔹 印尼上调燃油附加费28个百分点应对高油价
+   └ 因中东战事导致全球油价飙升，印尼将航空燃油附加费由10%上调至38%，国内航线机票价格上调9%-13%
+   📎 https://www.10jqka.com.cn/
+
+🔹 美国3月ISM服务业支付价格指数创逾3年新高
+   └ 美国3月ISM服务业支付价格指数70.7，创2022年10月以来最高；ISM非制造业PMI为54，低于预估的54.9
+   📎 https://www.10jqka.com.cn/
+
+🔹 韩国计划到2030年可再生能源发电占比达20%
+   └ 韩国宣布将大力发展太阳能与风能发电，到2030年可再生能源供电规模扩大至100吉瓦，并关停60座燃煤电厂
+   📎 https://www.36kr.com/newsflashes
+
+🔹 泰国新内阁宣誓就职
+   └ 当地时间6日下午，泰国总理阿努廷率领新一届内阁成员向泰国国王宣誓就职，新政府全面进入运转阶段
+   📎 https://www.10jqka.com.cn/
+
+🔹 加密货币行情
+   └ BTC：$69,502 USD | ETH：$2,137 USD
+   📎 CoinGecko
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新
+</div>
+        </div>
+        
+        <div class="news-card">
+            <div class="news-time">未知</div>
+            <div class="news-content">📈 财经简报 · 2026年4月6日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 匈牙利将军事保护"土耳其溪"天然气管道匈牙利段
+   └ 匈牙利外长表示，鉴于针对"土耳其溪"天然气管道的袭击愈加频繁，匈牙利将军事保护该管道匈牙利段。最近几周，乌克兰动用数十架无人机袭击了位于俄罗斯境内的该管道
+   📎 https://www.10jqka.com.cn/
+
+🔹 伊朗：收取通行费赔偿战争损失后，将重新开放霍尔木兹海峡
+   └ 伊朗总统府通讯与信息事务副手表示，只有在新法律框架下，通过部分过境通行费收入"全额赔偿"强加于伊朗的战争所造成的损失后，伊朗才会重新开放霍尔木兹海峡
+   📎 https://www.10jqka.com.cn/
+
+🔹 王毅同俄罗斯外长拉夫罗夫通电话，就当前中东形势交换意见
+   └ 王毅表示，中东局势仍在恶化、战事还在升级，解决霍尔木兹海峡通航问题的根本是尽快停火止战。中俄将继续在联合国安理会合作，为局势降温做出努力
+   📎 https://www.10jqka.com.cn/
+
+🔹 以军称打死伊朗革命卫队石油部门高级指挥官
+   └ 当地时间5日下午，以军在针对伊朗首都德黑兰的空袭行动中，打死伊斯兰革命卫队石油部门高级指挥官阿什拉菲·卡希。据估算年贸易额达数十亿美元
+   📎 https://www.10jqka.com.cn/
+
+🔹 以色列宣布已停止所有对法国防采购
+   └ 因法国禁止以色列军机利用法国领空执行针对伊朗的作战任务，以国防部已停止所有来自法国的国防采购，并通知法方"不打算与其会面"
+   📎 https://www.10jqka.com.cn/
+
+🔹 机构最新调研路线图：迈瑞医疗最获关注，356家机构调研
+   └ Wind数据显示，机构本周共调研355家上市公司，迈瑞医疗最获关注，参与调研机构达356家。东鹏饮料获325家机构调研，金盘科技、澜起科技均获超200家机构调研
+   📎 https://www.yicai.com/brief/103119707.html
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新</div>
+        </div>
+        
+        <div class="news-card">
+            <div class="news-time">未知</div>
+            <div class="news-content">📈 财经简报 · 2026年4月4日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 四家上市银行存贷比多年超100%，净息差承压
+   └ 工行、建行、农行、邮储存贷比均超100%，邮储达103.47%居首；净息差持续收窄，银行盈利压力加大
+   📎 https://news.yicai.com/news/103119237.html
+
+🔹 一季度车市出口逆势增长27%，零售销量同比下滑17%
+   └ 一季度国内零售销量479.2万辆，同比降17%；出口115.7万辆，同比增27%；新能源汽车销量193.6万辆，占比40.4%
+   📎 https://news.yicai.com/news/103119225.html
+
+🔹 玩具厂老板4天身家暴涨27亿
+   └ 1-2月玩具出口增长37%，外贸订单激增；港口再现排队出运盛况，行业景气度明显回升
+   📎 https://finance.ifeng.com/c/8s1p5iazxmE
+
+🔹 中国平安详解医疗养老战略：三步走构建"第二增长曲线"
+   └ 未来2~3年是医疗养老战略从2.0向3.0阶段爆发的关键期，健康险+养老服务闭环成型
+   📎 https://news.yicai.com/news/103119166.html
+
+🔹 江苏全省人工智能大会：加快打造创新发展高地
+   └ 省长刘小涛主持，要求瞄准应用端、要素端、供给端、生态端，深化"人工智能+"场景落地
+   📎 https://www.10jqka.com.cn/
+
+🔹 基金行业首个大模型技术应用规范发布
+   └ 规范将大模型在资产管理业务中的应用划分为六层次：基础设施、数据管理、模型服务、应用技术、安全管理、场景应用
+   📎 https://news.yicai.com/news/103119115.html
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新
+</div>
+        </div>
+        
+        <div class="news-card">
+            <div class="news-time">未知</div>
+            <div class="news-content">📈 财经简报 · 2026年4月4日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 美国3月服务业PMI跌破荣枯线，滞胀风险再升级
+   └ 美国3月服务业PMI降至49.7，为2023年12月以来首次跌破50荣枯线；标普预计3月末经济增速降至0.5%，滞胀风险升温
+   📎 https://news.yicai.com/news/103119307.html
+
+🔹 美国3月非农新增17.8万人，远超预期
+   └ 3月非农就业人口新增17.8万人，前值下修至减少13.3万人；失业率微升至4.0%，降息预期降温
+   📎 https://news.yicai.com/news/103119305.html
+
+🔹 四家上市银行存贷比多年超100%，净息差承压
+   └ 工行、建行、农行、邮储存贷比均超100%，邮储达103.47%居首；净息差持续收窄，银行盈利压力加大
+   📎 https://news.yicai.com/news/103119237.html
+
+🔹 一季度车市零售销量同比下滑17%，出口逆势增长27%
+   └ 一季度国内零售销量479.2万辆，同比降17%；出口115.7万辆，同比增27%；新能源汽车销量193.6万辆，占比40.4%
+   📎 https://news.yicai.com/news/103119225.html
+
+🔹 玩具厂老板4天身家暴涨27亿
+   └ 1-2月玩具出口增长37%，外贸订单激增；港口再现排队出运盛况，行业景气度明显回升
+   📎 https://finance.ifeng.com/c/8s1p5iazxmE
+
+🔹 商务部：持续优化消费品以旧换新政策，有力有序抓好政策落实
+   └ 会议强调加快央地平台高效直联，提升补贴审核和资金兑付效率；严防骗补套补，确保补贴资金用到实效
+   📎 https://www.10jqka.com.cn/
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新</div>
+        </div>
+        
+</div><!-- 动态新闻区域 -->l lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width: 100%, initial-scale=1.0">
+    <title>巨富财经 - 每日精选全球重要财经资讯</title>
+    <meta name="description" content="📈 每日精选全球重要财经资讯 | 🔍 深度解读市场趋势与投资机会 | 💰 分享实用理财技巧与搞钱思路">
+    <meta name="keywords" content="巨富财经, 财经资讯, 投资理财, 金融, 股票, 基金, 理财技巧">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/jfcj-news/sitemap.xml">
+    <link rel="canonical" href="https://bang1681681-dev.github.io/jfcj-news/">
+    <meta name="author" content="巨富财经">
+    <meta property="og:title" content="巨富财经 - 每日精选全球重要财经资讯">
+    <meta property="og:description" content="📈 每日精选全球重要财经资讯 | 🔍 深度解读市场趋势与投资机会 | 💰 分享实用理财技巧与搞钱思路">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t.me/jmcj_news">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #0088cc;
+            --primary-dark: #006699;
+            --bg-dark: #0f1419;
+            --bg-card: #1a1f2e;
+            --text-primary: #ffffff;
+            --text-secondary: #8899a6;
+            --accent: #ffd700;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            background-image: 
+                radial-gradient(ellipse at top, #1a2a3a 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, #0a1520 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 16px;
+            animation: float 3s ease-in-out infinite;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffd700, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .description {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .description span {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .description span:last-child {
+            margin-bottom: 0;
+        }
+
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #0088cc, #00aaff);
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+            margin-bottom: 30px;
+        }
+
+        .telegram-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 136, 204, 0.6);
+        }
+
+        .telegram-btn svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .news-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .news-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .news-time {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .news-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .news-content a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+
+        .stats {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .logo {
+                font-size: 50px;
+            }
+
+            .news-card {
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">📈</div>
+        
+        <h1>巨富财经</h1>
+        
+        <div class="description">
+            <span>📈 每日精选全球重要财经资讯</span>
+            <span>🔍 深度解读市场趋势与投资机会</span>
+            <span>💰 分享实用理财技巧与搞钱思路</span>
+        </div>
+        
+        <div style="text-align: center;">
+            <a href="https://t.me/jmcj_news" target="_blank" rel="noopener noreferrer" class="telegram-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+                加入 Telegram 频道
+            </a>
+        </div>
+        
+        <!-- 动态新闻区域 -->
+        <h2 class="section-title">📰 最新资讯</h2>
+        <div class="news-list" id="newsList">
+            <!-- 新闻内容将自动同步 -->
+            <div class="news-card">
+                <div class="news-time">2026-04-07</div>
+                <div class="news-content">📈 财经简报 · 2026年4月7日
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+🔹 美伊达成停火协议"希望渐灭"，特朗普最后期限将至
+   └ 调解方对伊朗在特朗普设定的7日20时最后期限前"屈服"感到悲观
+   📎 https://www.10jqka.com.cn/
+
+🔹 三星电子盈利指引超预期：单季赚超2600亿元
+   └ 市场机构预测DRAM合约价Q2还将上涨58%-63%
+   📎 https://www.yicai.com/news/103120598.html
+
+━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━ ━
+
+📱 巨富财经 · 每小时更新</div>
+            </div>
+        </div>
         
         <div class="stats">
             <div class="stat-item">
@@ -215,7 +701,8 @@
         </div>
         
         <footer>
-            © 2024 巨富财经. All rights reserved.
+            © 2024 巨富财经. All rights reserved.<br>
+            <a href="https://t.me/jmcj_news" style="color: var(--primary);">https://t.me/jmcj_news</a>
         </footer>
     </div>
 </body>
